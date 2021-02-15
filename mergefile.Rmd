@@ -1,0 +1,71 @@
+---
+title: "merged file for project"
+output: html_notebook
+---
+
+1. Let build the links:
+
+```{r}
+# organization link
+linkOrg='https://github.com/Visual-Analytics-Project-UW-EvansSchool/'
+
+student1Link=paste0(linkOrg,'student1/raw/main/digitalStrategy.xlsx')
+
+student2Link=paste0(linkOrg,'student2/raw/main/healthStrategy.xlsx')
+
+student3Link=paste0(linkOrg,'student3/raw/main/infrasStrategy.xlsx')
+
+student4Link=paste0(linkOrg,'student4/raw/main/personelStrategy.xlsx')
+```
+
+2. Let me get the data from each link. I need **rio** since the files are in Excel:
+
+```{r}
+library(rio)
+s1=import(student1Link)
+s2=import(student2Link)
+s3=import(student3Link)
+s4=import(student4Link)
+```
+
+3. See the row names to find the common column:
+
+```{r}
+head(s1)
+```
+```{r}
+head(s2)
+```
+
+```{r}
+head(s3)
+```
+
+```{r}
+head(s4)
+```
+
+4. Do the merge. 
+
+All of them have _city_ as the common value column, then:
+
+```{r}
+s1_2=merge(s1,s2,by.x = 'city',by.y = 'city')
+s3_4=merge(s3,s4,by.x = 'city',by.y = 'city')
+s_all=merge(s1_2,s3_4,by.x = 'city',by.y = 'city')
+```
+
+5. Verify the data types:
+```{r}
+str(s_all,width=50,strict.width='cut')
+```
+
+6. Save the file.
+
+Since all is OK, we can save:
+```{r}
+write.csv(s_all,
+          file = 'merged_data.csv',
+          row.names = F)
+```
+
