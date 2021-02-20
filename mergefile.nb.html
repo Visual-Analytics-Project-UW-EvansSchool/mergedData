@@ -1764,17 +1764,16 @@ summary {
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBvcmdhbml6YXRpb24gbGlua1xubGlua09yZz0naHR0cHM6Ly9naXRodWIuY29tL1Zpc3VhbC1BbmFseXRpY3MtUHJvamVjdC1VVy1FdmFuc1NjaG9vbC8nXG5cbnN0dWRlbnQxTGluaz1wYXN0ZTAobGlua09yZywnc3R1ZGVudDEvcmF3L21haW4vZGlnaXRhbFN0cmF0ZWd5Lnhsc3gnKVxuXG5zdHVkZW50Mkxpbms9cGFzdGUwKGxpbmtPcmcsJ3N0dWRlbnQyL3Jhdy9tYWluL2hlYWx0aFN0cmF0ZWd5Lnhsc3gnKVxuXG5zdHVkZW50M0xpbms9cGFzdGUwKGxpbmtPcmcsJ3N0dWRlbnQzL3Jhdy9tYWluL2luZnJhc1N0cmF0ZWd5Lnhsc3gnKVxuXG5zdHVkZW50NExpbms9cGFzdGUwKGxpbmtPcmcsJ3N0dWRlbnQ0L3Jhdy9tYWluL3BlcnNvbmVsU3RyYXRlZ3kueGxzeCcpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBvcmdhbml6YXRpb24gbGlua1xubGlua09yZz0naHR0cHM6Ly9naXRodWIuY29tL1Zpc3VhbC1BbmFseXRpY3MtUHJvamVjdC1VVy1FdmFuc1NjaG9vbC8nXG5cbnN0dWRlbnQxTGluaz1wYXN0ZTAobGlua09yZywnc3R1ZGVudDEvcmF3L21haW4vZGVtb2NyYWN5Lnhsc3gnKVxuXG5zdHVkZW50Mkxpbms9cGFzdGUwKGxpbmtPcmcsJ3N0dWRlbnQyL3Jhdy9tYWluL2h1bWFuZGV2Lnhsc3gnKVxuXG5zdHVkZW50M0xpbms9cGFzdGUwKGxpbmtPcmcsJ3N0dWRlbnQzL3Jhdy9tYWluL21pbGlfbW9uZXkueGxzeCcpXG5cblxuYGBgIn0= -->
 <pre class="r"><code># organization link
 linkOrg=&#39;https://github.com/Visual-Analytics-Project-UW-EvansSchool/&#39;
 
-student1Link=paste0(linkOrg,&#39;student1/raw/main/digitalStrategy.xlsx&#39;)
+student1Link=paste0(linkOrg,&#39;student1/raw/main/democracy.xlsx&#39;)
 
-student2Link=paste0(linkOrg,&#39;student2/raw/main/healthStrategy.xlsx&#39;)
+student2Link=paste0(linkOrg,&#39;student2/raw/main/humandev.xlsx&#39;)
 
-student3Link=paste0(linkOrg,&#39;student3/raw/main/infrasStrategy.xlsx&#39;)
-
-student4Link=paste0(linkOrg,&#39;student4/raw/main/personelStrategy.xlsx&#39;)</code></pre>
+student3Link=paste0(linkOrg,&#39;student3/raw/main/mili_money.xlsx&#39;)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1783,12 +1782,11 @@ student4Link=paste0(linkOrg,&#39;student4/raw/main/personelStrategy.xlsx&#39;)</
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyaW8pXG5zMT1pbXBvcnQoc3R1ZGVudDFMaW5rKVxuczI9aW1wb3J0KHN0dWRlbnQyTGluaylcbnMzPWltcG9ydChzdHVkZW50M0xpbmspXG5zND1pbXBvcnQoc3R1ZGVudDRMaW5rKVxuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyaW8pXG5zMT1pbXBvcnQoc3R1ZGVudDFMaW5rKVxuczI9aW1wb3J0KHN0dWRlbnQyTGluaylcbnMzPWltcG9ydChzdHVkZW50M0xpbmspXG5cbmBgYCJ9 -->
 <pre class="r"><code>library(rio)
 s1=import(student1Link)
 s2=import(student2Link)
 s3=import(student3Link)
-s4=import(student4Link)
 </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -1801,82 +1799,39 @@ s4=import(student4Link)
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzMSlcbmBgYCJ9 -->
 <pre class="r"><code>head(s1)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6OX0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzMVRNVy9UUUJTK3VIRXFSMnBWVVNRWVFHSUZsRWlJQVRMVlNRUElFaEpXR3lRWGh1aDh2c1RYMkhmUitkd1NDUWtXQkFNRGY0Q0JyZkFMV0NyQndKOWdaNEdCQ2NGQ3k5bStjNmhKT2VucHZmZDkvdTY5ZTc3YjZudlhtMTRUQUxBRTZ0S1dUQmtDOC83Z2R1c21BSFZESmpWSldKbC9KRDlhbDBHV3JFbHJLTUxxK3VtbGZnaDlVZ0p4SWpBUFlLeUFSbGVFbUNZcVcrNUJPcDZ3aWY2NkJ6bkNFYU93NURIWkpYUXN3OVZNYkRzZ1gvYU84bHNmQ3Q5WmpKYzY5MTIrU2w3N0txN3lmK281WU9GYWdCZTZhcDE1UC8vdnMxTHZWTDl6U2ozdis1c2ZUNjRlelBQanp3L2VmM3hzZTcrdjdIVU1Jdk92dTVjUGE2Vk96NjA2UjEybmM5S1hPby9jclQ5LzFwdlA3ZURPcjNiRHNEZmVkbDcvdlBqRkhrUVBYeVNIMyt4dDk5V25sMEduY245TUNtT2NnT0x1V0Fxc0l5Sm1LajdUSHpwMDZIS3lCOUhNWlJGQm1ybVFNOTE5eURIRlNkSW5ZeUpnTkFnNWhrTGZxdk9GT3ZXekRWeklCY1U4Q2NsVTgrZHlmb0JSU0ZuRXhyTmI4VFJpTXh5Y0tMNDU4ekhmeGlqbDg3YlcrOE43cVJnNkFhWkNvb01RajhSY2xGR2JMSjQ2ZElTUktMYzdxMFJVdmdPS1JSY2gyWGRsSUJabisyMDlsQlZweHROaXNJM3E1RkFFRXowNURUWURLR0I3eEtWZVprY1Z5VEtiQ3NMa2t3Tkc5bVROaXJqR0s4QmFTck5PZ2hZS1V6cHBYYnVSVmNqNXdsYVViL3dWVzBWTjQxanRaZXJYanVtWVVLeWJqNkNQSTVXc3lpUG5KMjVQT2FGNmpFMkpKbTNCNUQvVkNHS1JSdkxEZ2FNL3RJZklwcW9FQUFBPSJ9 -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJQVS9ETUJCMTg5R3FRUzFJTUFNS2M3S1VnUVVwcUtVb0VrcEZBNkxxWmhJWElsSzdTbE9sd01MU3Y4SEN6c3pDNzJCbTVqOFU3TlJYVmJaMDh0MjdqM2ZQN25jR0xXdGdJWVIwWkhEVFRlNGk4K2E2NjV3Z1pHZzhxUEJFWGR4elhyUmJWaUswdzYwcUUzclE2NFByaDVmZ2hyZm42NExoR20yZkJlQjIvVUNaVkExWVZ1QW5HZFg4aUtTWXhwQU1DeElUS3FPdGdCU0hRNEkzQzlxWTRoaERkemVoWlJLaHBraDZSMitmVjcrTEE4LyttcngvVzZlZXZkZ1hnR2UvQ3NuSXM1OS9MajcyWGp4N1ZCNUZ2VW54bUV6bHZyb0VEVC9zdFlDdnpXWTB6MkQ1ZW9lTW1VOWpNbGNHMVROV3VEQ3N3VTFiOGZOSFVCaWpGRStCRVVBcnhqbDJSeG52NTlGU2FhbXhTWjR3eXBzMDhWR20wbHpKRkdCN1JzVW1zUk05ek9pamN5d0l5dlRLR3ZLdWJ2ajZpbEw3azZOTWVIeEM3eE5LWVBjVTM1RlVCazJ1dUJUc1RyS0U1cUNFbzFNM1p6bUdPaXRpS1NDbE5yVDhCeVpwS3FLZkFnQUEifQ== -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["city"],"name":[1],"type":["chr"],"align":["left"]},{"label":["D_In_PrivacyPolicy"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["D_In_AwarenessDigitalThreats"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["D_In_PubPrivPartnerships"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["D_In_TechnologyEmployed"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["D_In_CyberSecurity"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["D_Out_IdentityTheft"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["D_Out_CompInfected"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["D_Out_InternetAccess"],"name":[9],"type":["dbl"],"align":["right"]}],"data":[{"1":"Abu Dhabi","2":"50","3":"66.66667","4":"50","5":"100","6":"50","7":"100.00000","8":"25","9":"97.64526","_rn_":"1"},{"1":"Amsterdam","2":"100","3":"100.00000","4":"50","5":"100","6":"50","7":"99.74426","8":"75","9":"100.00000","_rn_":"2"},{"1":"Athens","2":"75","3":"100.00000","4":"0","5":"75","6":"50","7":"100.00000","8":"25","9":"66.62939","_rn_":"3"},{"1":"Bangkok","2":"25","3":"66.66667","4":"0","5":"0","6":"50","7":"99.99770","8":"50","9":"31.66104","_rn_":"4"},{"1":"Barcelona","2":"100","3":"100.00000","4":"50","5":"100","6":"50","7":"99.95572","8":"25","9":"81.69309","_rn_":"5"},{"1":"Beijing","2":"75","3":"66.66667","4":"0","5":"75","6":"100","7":"99.99868","8":"25","9":"77.25884","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[9]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["ISO3"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Country"],"name":[2],"type":["chr"],"align":["left"]},{"label":["DemoIndex"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"NOR","2":"Norway","3":"9.81","_rn_":"1"},{"1":"ISL","2":"Iceland","3":"9.37","_rn_":"2"},{"1":"SWE","2":"Sweden","3":"9.26","_rn_":"3"},{"1":"NZL","2":"New Zealand","3":"9.25","_rn_":"4"},{"1":"CAN","2":"Canada","3":"9.24","_rn_":"5"},{"1":"FIN","2":"Finland","3":"9.20","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoczIpXG5gYGAifQ== -->
-<pre class="r"><code>names(s2)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzMilcbmBgYCJ9 -->
+<pre class="r"><code>head(s2)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImNpdHlcIiAgICAgICAgICAgICAgICAgICAgXG4gWzJdIFwiSF9Jbl9FbnZpcm9ubWVudFBvbGljaWVzXCJcbiBbM10gXCJIX0luX0FjY2Vzc0hlYWx0aGNhcmVcIiAgIFxuIFs0XSBcIkhfSW5fQmVkc18xMDAwXCIgICAgICAgICAgXG4gWzVdIFwiSF9Jbl9Eb2N0b3JzXzEwMDBcIiAgICAgICBcbiBbNl0gXCJIX0luX0FjY2Vzc0Zvb2RcIiAgICAgICAgIFxuIFs3XSBcIkhfSW5fUXVhbGl0eUhlYWx0aFNlcnZcIiAgXG4gWzhdIFwiSF9PdXRfQWlyUXVhbGl0eVwiICAgICAgICBcbiBbOV0gXCJIX091dF9XYXRlclF1YWxpdHlcIiAgICAgIFxuWzEwXSBcIkhfT3V0X0xpZmVFeHBlY3RZXCIgICAgICAgXG5bMTFdIFwiSF9PdXRfSW5mTW9ydGFsaXR5XCIgICAgICBcblsxMl0gXCJIX091dF9DYW5jZXJNb3J0YWxpdHlcIiAgIFxuWzEzXSBcIkhfT3V0X0F0dGFja3NCaW9DaGVtUmFkXCIgXG4ifQ== -->
-<pre><code> [1] &quot;city&quot;                    
- [2] &quot;H_In_EnvironmentPolicies&quot;
- [3] &quot;H_In_AccessHealthcare&quot;   
- [4] &quot;H_In_Beds_1000&quot;          
- [5] &quot;H_In_Doctors_1000&quot;       
- [6] &quot;H_In_AccessFood&quot;         
- [7] &quot;H_In_QualityHealthServ&quot;  
- [8] &quot;H_Out_AirQuality&quot;        
- [9] &quot;H_Out_WaterQuality&quot;      
-[10] &quot;H_Out_LifeExpectY&quot;       
-[11] &quot;H_Out_InfMortality&quot;      
-[12] &quot;H_Out_CancerMortality&quot;   
-[13] &quot;H_Out_AttacksBioChemRad&quot; </code></pre>
-<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJUVXJEUUJTZTVxODAwaXE2Y2VrRm1rMHA2S0lFcVJZRGtrS2pXTG9ReG1UVWFKeVVkR29VWEFpZVFOeTRjK0VWWEltSVMvRUNucUk1UW5XU3ppdGxCaDd6M3ZkOTcyK210OU52bUgwVElhUWlqWnVxY3hmcGh3ZWQraVpDbXNLREVpY3ErWDNEUld1RkVxRVZib1lnVkxmYkE5Zng5c0gxam5ibmdzRWNiVys3NEhZY1Y2cGt1SEdTNGxzUmxSMmZSSmdHUUhvcENRZ1YwWkpMMG8wQndZdUNOcVk0d0pEZENXbEJJbFRMU1R0NytieitmdHV5cytPbWZUZDV0TFBXOFBYWGJObVRuNitIVmZwc1Q5NXpJck16YmYySmZWeEkyK3NVWDVHUm1GY1ZvT1o0M1FiMGE4ZGp5aElZWHQzYmNhUVNsU1JPTFNoVDVhYmNvK0lZY2k4L3dpUG9CYUFaWUlhdDA0VG44MmdxcFpUaklRdGp5cE9VL0l0MEtibVVTTUR5bU9hVEJIWC9mRXd2NjgyOFFVSFByQ3B1WThGWFp5MlZQMUZLaDJjbjlDeWtCR2FQOEFtSlJGRGpHeGNMVzhNa3BBdzI0ZWpJWWpIRG9EUDlPQUtrMkExTi93RWFVZzJubVFJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["ISO3"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Country"],"name":[2],"type":["chr"],"align":["left"]},{"label":["HDI"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"NOR","2":"Norway","3":"0.957","_rn_":"1"},{"1":"ISL","2":"Iceland","3":"0.949","_rn_":"2"},{"1":"SWE","2":"Sweden","3":"0.945","_rn_":"3"},{"1":"NZL","2":"New Zealand","3":"0.931","_rn_":"4"},{"1":"CAN","2":"Canada","3":"0.929","_rn_":"5"},{"1":"FIN","2":"Finland","3":"0.938","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoczMpXG5gYGAifQ== -->
-<pre class="r"><code>names(s3)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzMylcbmBgYCJ9 -->
+<pre class="r"><code>head(s3)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImNpdHlcIiAgICAgICAgICAgICAgICAgICAgICAgXG4gWzJdIFwiSV9Jbl9FbmZvcmNlVHJhbnNwb3J0U2FmZXR5XCJcbiBbM10gXCJJX0luX1BlZGVzdHJpYW5GcmllbmRsaW5lc3NcIlxuIFs0XSBcIklfSW5fUXVhbGl0eVJvYWRcIiAgICAgICAgICAgXG4gWzVdIFwiSV9Jbl9RdWFsaXR5RWxlY3RyaWNpdHlcIiAgICBcbiBbNl0gXCJJX0luX0Rpc2FzdGVyTWFuYWdlbWVudFwiICAgIFxuIFs3XSBcIklfT3V0X0RlYXRoc0Rpc2FzdGVyXCIgICAgICAgXG4gWzhdIFwiSV9PdXRfVmVoaWN1bGFyQWNjaWRlbnRzXCIgICBcbiBbOV0gXCJJX091dF9QZWRlc3RyaWFuRGVhdGhcIiAgICAgIFxuWzEwXSBcIklfT3V0X0xpdmVTbHVtc1wiICAgICAgICAgICAgXG5bMTFdIFwiSV9PdXRfQXR0YWNrc0luZnJhc3RydWN0dXJlXCJcbiJ9 -->
-<pre><code> [1] &quot;city&quot;                       
- [2] &quot;I_In_EnforceTransportSafety&quot;
- [3] &quot;I_In_PedestrianFriendliness&quot;
- [4] &quot;I_In_QualityRoad&quot;           
- [5] &quot;I_In_QualityElectricity&quot;    
- [6] &quot;I_In_DisasterManagement&quot;    
- [7] &quot;I_Out_DeathsDisaster&quot;       
- [8] &quot;I_Out_VehicularAccidents&quot;   
- [9] &quot;I_Out_PedestrianDeath&quot;      
-[10] &quot;I_Out_LiveSlums&quot;            
-[11] &quot;I_Out_AttacksInfrastructure&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoczQpXG5gYGAifQ== -->
-<pre class="r"><code>names(s4)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImNpdHlcIiAgICAgICAgICAgICAgICAgICAgXG4gWzJdIFwiUF9Jbl9Qb2xpY2VFbmdhZ2VcIiAgICAgICBcbiBbM10gXCJQX0luX0NvbW11bml0eVBhdHJvbFwiICAgIFxuIFs0XSBcIlBfSW5fU3RyZWV0Q3JpbWVEYXRhXCIgICAgXG4gWzVdIFwiUF9Jbl9UZWNoRm9yQ3JpbWVcIiAgICAgICBcbiBbNl0gXCJQX0luX1ByaXZhdGVTZWN1cml0eVwiICAgIFxuIFs3XSBcIlBfSW5fR3VuUmVndWxhdGlvblwiICAgICAgXG4gWzhdIFwiUF9Jbl9Qb2xpdGljYWxTdGFiaWxpdHlcIiBcbiBbOV0gXCJQX091dF9QZXR0eUNyaW1lXCIgICAgICAgIFxuWzEwXSBcIlBfT3V0X1Zpb2xlbnRDcmltZVwiICAgICAgXG5bMTFdIFwiUF9PdXRfT3JnYW5pc2VkQ3JpbWVcIiAgICBcblsxMl0gXCJQX091dF9Db3JydXB0aW9uXCIgICAgICAgIFxuWzEzXSBcIlBfT3V0X0RydWdVc2VcIiAgICAgICAgICAgXG5bMTRdIFwiUF9PdXRfVGVycm9yaXN0QXR0YWNrc1wiICBcblsxNV0gXCJQX091dF9TZXZlcml0eVRlcnJvcmlzdFwiIFxuWzE2XSBcIlBfT3V0X0dlbmRlclNhZmV0eVwiICAgICAgXG5bMTddIFwiUF9PdXRfUGVyY2VwdGlvblNhZmV0eVwiICBcblsxOF0gXCJQX091dF9UaHJlYVRlcnJvcmlzbVwiICAgIFxuWzE5XSBcIlBfT3V0X1RocmVhdE1pbGl0YXJ5Q29uZlwiXG5bMjBdIFwiUF9PdXRfVGhyZWF0Q2l2VW5yZXN0XCIgICBcbiJ9 -->
-<pre><code> [1] &quot;city&quot;                    
- [2] &quot;P_In_PoliceEngage&quot;       
- [3] &quot;P_In_CommunityPatrol&quot;    
- [4] &quot;P_In_StreetCrimeData&quot;    
- [5] &quot;P_In_TechForCrime&quot;       
- [6] &quot;P_In_PrivateSecurity&quot;    
- [7] &quot;P_In_GunRegulation&quot;      
- [8] &quot;P_In_PoliticalStability&quot; 
- [9] &quot;P_Out_PettyCrime&quot;        
-[10] &quot;P_Out_ViolentCrime&quot;      
-[11] &quot;P_Out_OrganisedCrime&quot;    
-[12] &quot;P_Out_Corruption&quot;        
-[13] &quot;P_Out_DrugUse&quot;           
-[14] &quot;P_Out_TerroristAttacks&quot;  
-[15] &quot;P_Out_SeverityTerrorist&quot; 
-[16] &quot;P_Out_GenderSafety&quot;      
-[17] &quot;P_Out_PerceptionSafety&quot;  
-[18] &quot;P_Out_ThreaTerrorism&quot;    
-[19] &quot;P_Out_ThreatMilitaryConf&quot;
-[20] &quot;P_Out_ThreatCivUnrest&quot;   </code></pre>
-<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJ6VXJEUUJDZUprMUtJNjJDTCtBTEpKZUFlQ2xScW9XQXBOQW9sbDVrVFZZTnByc2hUVW05K1JwNjlaRTgrQnllOUZUZDNlNlVtb0ZoNS92bTU1dEpKdWRUMzVrNkFHQkNXN2hwaVJDczY2dVJld0xRTmdSb2lVUlh2aXRSZEtncUFRNkUyenBoUnVNSmhtRjhpV0Y4YzdFdG1HM1o0Vm1FNFNpTUdwUHNpSmMxZWRhb0V5WTBKeXpGWkZ6VGxES045aUphSDgwbzJTMFlFa1pTZ3QyampLa2tRRjhtVDJGUXZIODZnK0REVnhaOHZVcDdDMzVBV2ZDdGVZMGIxMXVNek9sQzcydHFzaDNHWXgvMWhuekpxaEtYZCtaWmZrdFhCWlViL0p2VUxYbnQ0YlNlY09ObG8yYzNKWk9jTEZBU1NTY2xGZkh1UzlFdjBMclIwdUZGbFhFbW1nejVwNnhHYzZ0c0VQdExKamRKM2VSeHlaN2NZeW1nMGh2djZkZmVpYzJOcFBHclIxbjQ5U2w3eUJqRjNYTnlSM01OK3VKaWRiQlhsQm1yOEJMQkxyeUtWd1RybklUbnlLamJZUDBIU1BneHZLQUNBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["ISO3"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Country"],"name":[2],"type":["chr"],"align":["left"]},{"label":["mil_expend"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"NOR","2":"Norway","3":"2.03","_rn_":"1"},{"1":"ISL","2":"Iceland","3":"0.30","_rn_":"2"},{"1":"SWE","2":"Sweden","3":"1.10","_rn_":"3"},{"1":"NZL","2":"New Zealand","3":"1.50","_rn_":"4"},{"1":"CAN","2":"Canada","3":"1.45","_rn_":"5"},{"1":"FIN","2":"Finland","3":"1.50","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="4" style="list-style-type: decimal">
@@ -1885,10 +1840,9 @@ s4=import(student4Link)
 <p>All of them have <em>city</em> as the common value column, then:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuczFfMj1tZXJnZShzMSxzMixieS54ID0gJ2NpdHknLGJ5LnkgPSAnY2l0eScpXG5zM180PW1lcmdlKHMzLHM0LGJ5LnggPSAnY2l0eScsYnkueSA9ICdjaXR5JylcbnNfYWxsPW1lcmdlKHMxXzIsczNfNCxieS54ID0gJ2NpdHknLGJ5LnkgPSAnY2l0eScpXG5gYGAifQ== -->
-<pre class="r"><code>s1_2=merge(s1,s2,by.x = &#39;city&#39;,by.y = &#39;city&#39;)
-s3_4=merge(s3,s4,by.x = &#39;city&#39;,by.y = &#39;city&#39;)
-s_all=merge(s1_2,s3_4,by.x = &#39;city&#39;,by.y = &#39;city&#39;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuczFfMj1tZXJnZShzMSxzMixieS54ID0gYygnSVNPMycsJ0NvdW50cnknKSxieS55ID0gYygnSVNPMycsJ0NvdW50cnknKSlcbnNfYWxsPW1lcmdlKHMxXzIsczMpXG5gYGAifQ== -->
+<pre class="r"><code>s1_2=merge(s1,s2,by.x = c(&#39;ISO3&#39;,&#39;Country&#39;),by.y = c(&#39;ISO3&#39;,&#39;Country&#39;))
+s_all=merge(s1_2,s3)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1900,58 +1854,13 @@ s_all=merge(s1_2,s3_4,by.x = &#39;city&#39;,by.y = &#39;city&#39;)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyKHNfYWxsLHdpZHRoPTUwLHN0cmljdC53aWR0aD0nY3V0JylcbmBgYCJ9 -->
 <pre class="r"><code>str(s_all,width=50,strict.width=&#39;cut&#39;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJ2RhdGEuZnJhbWUnOlx0NjAgb2JzLiBvZiAgNTAgdmFyaWFibGVzOlxuICQgY2l0eSAgICAgICAgICAgICAgICAgICAgICAgIDogY2hyICBcIkFidSBEaGFiXCIuLlxuICQgRF9Jbl9Qcml2YWN5UG9saWN5ICAgICAgICAgIDogbnVtICA1MCAxMDAgNzUgLi5cbiAkIERfSW5fQXdhcmVuZXNzRGlnaXRhbFRocmVhdHM6IG51bSAgNjYuNyAxMDAgMS4uXG4gJCBEX0luX1B1YlByaXZQYXJ0bmVyc2hpcHMgICAgOiBudW0gIDUwIDUwIDAgMCAuLlxuICQgRF9Jbl9UZWNobm9sb2d5RW1wbG95ZWQgICAgIDogbnVtICAxMDAgMTAwIDc1Li5cbiAkIERfSW5fQ3liZXJTZWN1cml0eSAgICAgICAgICA6IG51bSAgNTAgNTAgNTAgNS4uXG4gJCBEX091dF9JZGVudGl0eVRoZWZ0ICAgICAgICAgOiBudW0gIDEwMCA5OS43IDEuLlxuICQgRF9PdXRfQ29tcEluZmVjdGVkICAgICAgICAgIDogbnVtICAyNSA3NSAyNSA1Li5cbiAkIERfT3V0X0ludGVybmV0QWNjZXNzICAgICAgICA6IG51bSAgOTcuNiAxMDAgNi4uXG4gJCBIX0luX0Vudmlyb25tZW50UG9saWNpZXMgICAgOiBudW0gIDYyLjggOTcuNyAuLlxuICQgSF9Jbl9BY2Nlc3NIZWFsdGhjYXJlICAgICAgIDogbnVtICA3My4zIDEwMCA3Li5cbiAkIEhfSW5fQmVkc18xMDAwICAgICAgICAgICAgICA6IG51bSAgOC4yNyAzOC4wMi4uXG4gJCBIX0luX0RvY3RvcnNfMTAwMCAgICAgICAgICAgOiBudW0gIDE2LjM3IDM4IDcuLlxuICQgSF9Jbl9BY2Nlc3NGb29kICAgICAgICAgICAgIDogbnVtICA5OS43IDEwMCAxLi5cbiAkIEhfSW5fUXVhbGl0eUhlYWx0aFNlcnYgICAgICA6IG51bSAgNzUgMTAwIDYyLi4uXG4gJCBIX091dF9BaXJRdWFsaXR5ICAgICAgICAgICAgOiBudW0gIDQ0LjIgODQuNCAuLlxuICQgSF9PdXRfV2F0ZXJRdWFsaXR5ICAgICAgICAgIDogbnVtICA5MS4zIDk0LjUgLi5cbiAkIEhfT3V0X0xpZmVFeHBlY3RZICAgICAgICAgICA6IG51bSAgNzQuOSA5MC40IC4uXG4gJCBIX091dF9JbmZNb3J0YWxpdHkgICAgICAgICAgOiBudW0gIDkzLjIgOTcuNCAuLlxuICQgSF9PdXRfQ2FuY2VyTW9ydGFsaXR5ICAgICAgIDogbnVtICA4My40IDE3LjEgLi5cbiAkIEhfT3V0X0F0dGFja3NCaW9DaGVtUmFkICAgICA6IG51bSAgMTAwIDEwMCAxMC4uXG4gJCBJX0luX0VuZm9yY2VUcmFuc3BvcnRTYWZldHkgOiBudW0gIDEwMCA3MCA2MCAuLlxuICQgSV9Jbl9QZWRlc3RyaWFuRnJpZW5kbGluZXNzIDogbnVtICAxMDAgMTAwIDEwLi5cbiAkIElfSW5fUXVhbGl0eVJvYWQgICAgICAgICAgICA6IG51bSAgMTAwIDEwMCA1MC4uXG4gJCBJX0luX1F1YWxpdHlFbGVjdHJpY2l0eSAgICAgOiBudW0gIDc1IDEwMCA3NSAuLlxuICQgSV9Jbl9EaXNhc3Rlck1hbmFnZW1lbnQgICAgIDogbnVtICA3NSAxMDAgNzUgLi5cbiAkIElfT3V0X0RlYXRoc0Rpc2FzdGVyICAgICAgICA6IG51bSAgMTAwIDk5LjcgOS4uXG4gJCBJX091dF9WZWhpY3VsYXJBY2NpZGVudHMgICAgOiBudW0gIDk1LjcgOTYuNiAuLlxuICQgSV9PdXRfUGVkZXN0cmlhbkRlYXRoICAgICAgIDogbnVtICA2OCAxMDAgODQuLi5cbiAkIElfT3V0X0xpdmVTbHVtcyAgICAgICAgICAgICA6IG51bSAgMTAwIDk0LjIgOC4uXG4gJCBJX091dF9BdHRhY2tzSW5mcmFzdHJ1Y3R1cmUgOiBudW0gIDEwMCAxMDAgOTEuLlxuICQgUF9Jbl9Qb2xpY2VFbmdhZ2UgICAgICAgICAgIDogbnVtICAxMDAgMTAwIDUwLi5cbiAkIFBfSW5fQ29tbXVuaXR5UGF0cm9sICAgICAgICA6IG51bSAgMTAwIDEwMCAwIC4uXG4gJCBQX0luX1N0cmVldENyaW1lRGF0YSAgICAgICAgOiBudW0gIDEwMCAxMDAgMTAuLlxuICQgUF9Jbl9UZWNoRm9yQ3JpbWUgICAgICAgICAgIDogbnVtICAwIDEwMCAxMDAgLi5cbiAkIFBfSW5fUHJpdmF0ZVNlY3VyaXR5ICAgICAgICA6IG51bSAgMTAwIDEwMCAxMC4uXG4gJCBQX0luX0d1blJlZ3VsYXRpb24gICAgICAgICAgOiBudW0gIDQ3LjYgNjguMyAuLlxuICQgUF9Jbl9Qb2xpdGljYWxTdGFiaWxpdHkgICAgIDogbnVtICA1NSA4MCA3MCA0Li5cbiAkIFBfT3V0X1BldHR5Q3JpbWUgICAgICAgICAgICA6IG51bSAgNzUgNTAgNzUgNS4uXG4gJCBQX091dF9WaW9sZW50Q3JpbWUgICAgICAgICAgOiBudW0gIDEwMCA3NSAxMDAuLlxuICQgUF9PdXRfT3JnYW5pc2VkQ3JpbWUgICAgICAgIDogbnVtICA3NSAxMDAgNTAgLi5cbiAkIFBfT3V0X0NvcnJ1cHRpb24gICAgICAgICAgICA6IG51bSAgNjYgODMgNDQgMy4uXG4gJCBQX091dF9EcnVnVXNlICAgICAgICAgICAgICAgOiBudW0gIDg2LjggNjQuNiAuLlxuICQgUF9PdXRfVGVycm9yaXN0QXR0YWNrcyAgICAgIDogbnVtICA5OS45IDk5LjkgLi5cbiAkIFBfT3V0X1NldmVyaXR5VGVycm9yaXN0ICAgICA6IG51bSAgMTAwIDEwMCA5OS4uXG4gJCBQX091dF9HZW5kZXJTYWZldHkgICAgICAgICAgOiBudW0gIDk2LjEgOTYuOSAuLlxuICQgUF9PdXRfUGVyY2VwdGlvblNhZmV0eSAgICAgIDogbnVtICA4NC41IDY3LjQgLi5cbiAkIFBfT3V0X1RocmVhVGVycm9yaXNtICAgICAgICA6IG51bSAgNzUgNzUgNzUgMi4uXG4gJCBQX091dF9UaHJlYXRNaWxpdGFyeUNvbmYgICAgOiBudW0gIDEwMCAxMDAgNzUuLlxuICQgUF9PdXRfVGhyZWF0Q2l2VW5yZXN0ICAgICAgIDogbnVtICA3NSA3NSA1MCAyLi5cbiJ9 -->
-<pre><code>&#39;data.frame&#39;:   60 obs. of  50 variables:
- $ city                        : chr  &quot;Abu Dhab&quot;..
- $ D_In_PrivacyPolicy          : num  50 100 75 ..
- $ D_In_AwarenessDigitalThreats: num  66.7 100 1..
- $ D_In_PubPrivPartnerships    : num  50 50 0 0 ..
- $ D_In_TechnologyEmployed     : num  100 100 75..
- $ D_In_CyberSecurity          : num  50 50 50 5..
- $ D_Out_IdentityTheft         : num  100 99.7 1..
- $ D_Out_CompInfected          : num  25 75 25 5..
- $ D_Out_InternetAccess        : num  97.6 100 6..
- $ H_In_EnvironmentPolicies    : num  62.8 97.7 ..
- $ H_In_AccessHealthcare       : num  73.3 100 7..
- $ H_In_Beds_1000              : num  8.27 38.02..
- $ H_In_Doctors_1000           : num  16.37 38 7..
- $ H_In_AccessFood             : num  99.7 100 1..
- $ H_In_QualityHealthServ      : num  75 100 62...
- $ H_Out_AirQuality            : num  44.2 84.4 ..
- $ H_Out_WaterQuality          : num  91.3 94.5 ..
- $ H_Out_LifeExpectY           : num  74.9 90.4 ..
- $ H_Out_InfMortality          : num  93.2 97.4 ..
- $ H_Out_CancerMortality       : num  83.4 17.1 ..
- $ H_Out_AttacksBioChemRad     : num  100 100 10..
- $ I_In_EnforceTransportSafety : num  100 70 60 ..
- $ I_In_PedestrianFriendliness : num  100 100 10..
- $ I_In_QualityRoad            : num  100 100 50..
- $ I_In_QualityElectricity     : num  75 100 75 ..
- $ I_In_DisasterManagement     : num  75 100 75 ..
- $ I_Out_DeathsDisaster        : num  100 99.7 9..
- $ I_Out_VehicularAccidents    : num  95.7 96.6 ..
- $ I_Out_PedestrianDeath       : num  68 100 84...
- $ I_Out_LiveSlums             : num  100 94.2 8..
- $ I_Out_AttacksInfrastructure : num  100 100 91..
- $ P_In_PoliceEngage           : num  100 100 50..
- $ P_In_CommunityPatrol        : num  100 100 0 ..
- $ P_In_StreetCrimeData        : num  100 100 10..
- $ P_In_TechForCrime           : num  0 100 100 ..
- $ P_In_PrivateSecurity        : num  100 100 10..
- $ P_In_GunRegulation          : num  47.6 68.3 ..
- $ P_In_PoliticalStability     : num  55 80 70 4..
- $ P_Out_PettyCrime            : num  75 50 75 5..
- $ P_Out_ViolentCrime          : num  100 75 100..
- $ P_Out_OrganisedCrime        : num  75 100 50 ..
- $ P_Out_Corruption            : num  66 83 44 3..
- $ P_Out_DrugUse               : num  86.8 64.6 ..
- $ P_Out_TerroristAttacks      : num  99.9 99.9 ..
- $ P_Out_SeverityTerrorist     : num  100 100 99..
- $ P_Out_GenderSafety          : num  96.1 96.9 ..
- $ P_Out_PerceptionSafety      : num  84.5 67.4 ..
- $ P_Out_ThreaTerrorism        : num  75 75 75 2..
- $ P_Out_ThreatMilitaryConf    : num  100 100 75..
- $ P_Out_ThreatCivUnrest       : num  75 75 50 2..</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiJ2RhdGEuZnJhbWUnOlx0MTM5IG9icy4gb2YgIDUgdmFyaWFibGVzOlxuICQgSVNPMyAgICAgIDogY2hyICBcIkFGR1wiIFwiQUdPXCIgXCJBTEJcIiBcIkFSRVwiIC4uLlxuICQgQ291bnRyeSAgIDogY2hyICBcIkFmZ2hhbmlzdGFuXCIgXCJBbmdvbGFcIiBcIkFsYlwiLi5cbiAkIERlbW9JbmRleCA6IG51bSAgMi44NSAzLjY2IDYuMDggMi43IDYuOTUgNS4zNS4uXG4gJCBIREkgICAgICAgOiBudW0gIDAuNTExIDAuNTgxIDAuNzk1IDAuODkgMC44NDUuLlxuICQgbWlsX2V4cGVuZDogbnVtICAxLjIgMS42IDEuNDcgNS43IDAuNyA0LjkgMS45Li5cbiJ9 -->
+<pre><code>&#39;data.frame&#39;:   139 obs. of  5 variables:
+ $ ISO3      : chr  &quot;AFG&quot; &quot;AGO&quot; &quot;ALB&quot; &quot;ARE&quot; ...
+ $ Country   : chr  &quot;Afghanistan&quot; &quot;Angola&quot; &quot;Alb&quot;..
+ $ DemoIndex : num  2.85 3.66 6.08 2.7 6.95 5.35..
+ $ HDI       : num  0.511 0.581 0.795 0.89 0.845..
+ $ mil_expend: num  1.2 1.6 1.47 5.7 0.7 4.9 1.9..</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1970,7 +1879,7 @@ s_all=merge(s1_2,s3_4,by.x = &#39;city&#39;,by.y = &#39;city&#39;)</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAibWVyZ2VkIGZpbGUgZm9yIHByb2plY3QiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCjEuIExldCBidWlsZCB0aGUgbGlua3M6CgpgYGB7cn0KIyBvcmdhbml6YXRpb24gbGluawpsaW5rT3JnPSdodHRwczovL2dpdGh1Yi5jb20vVmlzdWFsLUFuYWx5dGljcy1Qcm9qZWN0LVVXLUV2YW5zU2Nob29sLycKCnN0dWRlbnQxTGluaz1wYXN0ZTAobGlua09yZywnc3R1ZGVudDEvcmF3L21haW4vZGlnaXRhbFN0cmF0ZWd5Lnhsc3gnKQoKc3R1ZGVudDJMaW5rPXBhc3RlMChsaW5rT3JnLCdzdHVkZW50Mi9yYXcvbWFpbi9oZWFsdGhTdHJhdGVneS54bHN4JykKCnN0dWRlbnQzTGluaz1wYXN0ZTAobGlua09yZywnc3R1ZGVudDMvcmF3L21haW4vaW5mcmFzU3RyYXRlZ3kueGxzeCcpCgpzdHVkZW50NExpbms9cGFzdGUwKGxpbmtPcmcsJ3N0dWRlbnQ0L3Jhdy9tYWluL3BlcnNvbmVsU3RyYXRlZ3kueGxzeCcpCmBgYAoKMi4gTGV0IG1lIGdldCB0aGUgZGF0YSBmcm9tIGVhY2ggbGluay4gSSBuZWVkICoqcmlvKiogc2luY2UgdGhlIGZpbGVzIGFyZSBpbiBFeGNlbDoKCmBgYHtyfQpsaWJyYXJ5KHJpbykKczE9aW1wb3J0KHN0dWRlbnQxTGluaykKczI9aW1wb3J0KHN0dWRlbnQyTGluaykKczM9aW1wb3J0KHN0dWRlbnQzTGluaykKczQ9aW1wb3J0KHN0dWRlbnQ0TGluaykKYGBgCgozLiBTZWUgdGhlIHJvdyBuYW1lcyB0byBmaW5kIHRoZSBjb21tb24gY29sdW1uOgoKYGBge3J9CmhlYWQoczEpCmBgYApgYGB7cn0KaGVhZChzMikKYGBgCgpgYGB7cn0KaGVhZChzMykKYGBgCgpgYGB7cn0KaGVhZChzNCkKYGBgCgo0LiBEbyB0aGUgbWVyZ2UuIAoKQWxsIG9mIHRoZW0gaGF2ZSBfY2l0eV8gYXMgdGhlIGNvbW1vbiB2YWx1ZSBjb2x1bW4sIHRoZW46CgpgYGB7cn0KczFfMj1tZXJnZShzMSxzMixieS54ID0gJ2NpdHknLGJ5LnkgPSAnY2l0eScpCnMzXzQ9bWVyZ2UoczMsczQsYnkueCA9ICdjaXR5JyxieS55ID0gJ2NpdHknKQpzX2FsbD1tZXJnZShzMV8yLHMzXzQsYnkueCA9ICdjaXR5JyxieS55ID0gJ2NpdHknKQpgYGAKCjUuIFZlcmlmeSB0aGUgZGF0YSB0eXBlczoKYGBge3J9CnN0cihzX2FsbCx3aWR0aD01MCxzdHJpY3Qud2lkdGg9J2N1dCcpCmBgYAoKNi4gU2F2ZSB0aGUgZmlsZS4KClNpbmNlIGFsbCBpcyBPSywgd2UgY2FuIHNhdmU6CmBgYHtyfQp3cml0ZS5jc3Yoc19hbGwsCiAgICAgICAgICBmaWxlID0gJ21lcmdlZF9kYXRhLmNzdicsCiAgICAgICAgICByb3cubmFtZXMgPSBGKQpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAibWVyZ2VkIGZpbGUgZm9yIHByb2plY3QiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCjEuIExldCBidWlsZCB0aGUgbGlua3M6CgpgYGB7cn0KIyBvcmdhbml6YXRpb24gbGluawpsaW5rT3JnPSdodHRwczovL2dpdGh1Yi5jb20vVmlzdWFsLUFuYWx5dGljcy1Qcm9qZWN0LVVXLUV2YW5zU2Nob29sLycKCnN0dWRlbnQxTGluaz1wYXN0ZTAobGlua09yZywnc3R1ZGVudDEvcmF3L21haW4vZGVtb2NyYWN5Lnhsc3gnKQoKc3R1ZGVudDJMaW5rPXBhc3RlMChsaW5rT3JnLCdzdHVkZW50Mi9yYXcvbWFpbi9odW1hbmRldi54bHN4JykKCnN0dWRlbnQzTGluaz1wYXN0ZTAobGlua09yZywnc3R1ZGVudDMvcmF3L21haW4vbWlsaV9tb25leS54bHN4JykKCgpgYGAKCjIuIExldCBtZSBnZXQgdGhlIGRhdGEgZnJvbSBlYWNoIGxpbmsuIEkgbmVlZCAqKnJpbyoqIHNpbmNlIHRoZSBmaWxlcyBhcmUgaW4gRXhjZWw6CgpgYGB7cn0KbGlicmFyeShyaW8pCnMxPWltcG9ydChzdHVkZW50MUxpbmspCnMyPWltcG9ydChzdHVkZW50MkxpbmspCnMzPWltcG9ydChzdHVkZW50M0xpbmspCgpgYGAKCjMuIFNlZSB0aGUgcm93IG5hbWVzIHRvIGZpbmQgdGhlIGNvbW1vbiBjb2x1bW46CgpgYGB7cn0KI0RlbW9jcmFjeSBpbmRleApoZWFkKHMxKQpgYGAKYGBge3J9CiMgSHVtYW4gZGV2ZWxvcG1lbnQKaGVhZChzMikKYGBgCgpgYGB7cn0KI21pbGl0YXJ5IGV4cGVuc2VzIHBlciBjYXBpdGEKaGVhZChzMykKYGBgCgoKNC4gRG8gdGhlIG1lcmdlLiAKCkFsbCBvZiB0aGVtIGhhdmUgX2NpdHlfIGFzIHRoZSBjb21tb24gdmFsdWUgY29sdW1uLCB0aGVuOgoKYGBge3J9CnMxXzI9bWVyZ2UoczEsczIsYnkueCA9IGMoJ0lTTzMnLCdDb3VudHJ5JyksYnkueSA9IGMoJ0lTTzMnLCdDb3VudHJ5JykpCnNfYWxsPW1lcmdlKHMxXzIsczMpCmBgYAoKNS4gVmVyaWZ5IHRoZSBkYXRhIHR5cGVzOgpgYGB7cn0Kc3RyKHNfYWxsLHdpZHRoPTUwLHN0cmljdC53aWR0aD0nY3V0JykKYGBgCgo2LiBTYXZlIHRoZSBmaWxlLgoKU2luY2UgYWxsIGlzIE9LLCB3ZSBjYW4gc2F2ZToKYGBge3J9CndyaXRlLmNzdihzX2FsbCwKICAgICAgICAgIGZpbGUgPSAnbWVyZ2VkX2RhdGEuY3N2JywKICAgICAgICAgIHJvdy5uYW1lcyA9IEYpCmBgYAoK</div>
 
 
 
